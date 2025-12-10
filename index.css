@@ -15,7 +15,8 @@
 body {
   margin: 0;
   background: linear-gradient(180deg, #fff 0%, #fff0 40%), #faf7f8;
-  color: #222;
+  /* Color de la invitación */
+  color: RGB(71, 99, 70);
   line-height: 1.5;
 }
 header {
@@ -29,8 +30,12 @@ header {
 }
 header h1 {
   margin: 0;
-  font-size: clamp(28px, 6vw, 48px);
+  /* OFICIAL:font-size: clamp(28px, 6vw, 38px); */
+  font-size: clamp(28px, 8vw, 100px);
   letter-spacing: 0.4px;
+  /* añadido mio */
+  font-style: italic;
+  font-family: cursive;
 }
 header p {
   margin: 8px 0 0;
@@ -53,6 +58,7 @@ header p {
   border-radius: 12px;
   padding: 18px;
   box-shadow: var(--shadow);
+  text-align:justify;
 }
 .lead {
   font-size: 1.05rem;
@@ -143,10 +149,11 @@ footer {
   gap: 8px;
   flex-wrap: wrap;
 }
+/* A PARTIR DE AQUI MIO */
 .form {
   display: inline-block; /* Permite padding y margin, se comporta como bloque pero en línea */
   padding: 10px 20px; /* Espacio interior (arriba/abajo, izquierda/derecha) */
-  background-color: #b76e79; /* Color de fondo */
+  background-color: RGB(71, 99, 70); /* Color de fondo */
   color: white; /* Color del texto */
   text-decoration: none; /* Quita el subrayado del enlace */
   border: none; /* Sin borde */
@@ -157,6 +164,10 @@ footer {
   transition: background-color 0.3s ease;
 }
 .img{
-  width: 200px;
+  width: 400px;
   height: 200px;
 }
+h2{
+  text-align: center;
+}
+
