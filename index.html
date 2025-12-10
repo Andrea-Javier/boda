@@ -6,43 +6,7 @@
 <title>Boda — Andrea & Javier</title>
 <meta name="description" content="Invitación y detalles de la boda de [Nombre1] & [Nombre2]" />
 <link rel="stylesheet" href="index.css">
-<!-- <style>
-  :root{
-    --bg:#fff;
-    --muted:#666;
-    --accent:#b76e79;
-    --accent-2:#f3d6da;
-    --card:#fff;
-    --glass: rgba(255,255,255,0.7);
-    --shadow: 0 8px 24px rgba(16,24,40,0.08);
-    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  }
-  *{box-sizing:border-box}
-  body{margin:0;background:linear-gradient(180deg,#fff 0%,#fff0 40%),#faf7f8;color:#222;line-height:1.5}
-  header{display:flex;align-items:center;justify-content:center;flex-direction:column;padding:56px 20px 24px;background:linear-gradient(120deg,var(--accent-2),#fff);text-align:center}
-  header h1{margin:0;font-size:clamp(28px,6vw,48px);letter-spacing:0.4px}
-  header p{margin:8px 0 0;color:var(--muted)}
-  .container{max-width:1000px;margin:28px auto;padding:0 20px}
-  .grid{display:grid;gap:18px;}
-  .two{grid-template-columns:repeat(2,1fr)}
-  .card{background:var(--card);border-radius:12px;padding:18px;box-shadow:var(--shadow);}
-  .lead{font-size:1.05rem;color:#333}
-  .center{text-align:center}
-  .date{font-weight:700;color:var(--accent);font-size:1.05rem}
-  .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
-  .gallery img{width:100%;height:160px;object-fit:cover;border-radius:8px}
-  @media (max-width:720px){.gallery{grid-template-columns:repeat(2,1fr)}.two{grid-template-columns:1fr}}
-  .rsvp form{display:grid;gap:8px}
-  .rsvp label{font-size:0.9rem;color:var(--muted)}
-  input[type="text"], input[type="email"], select, textarea{padding:10px;border-radius:8px;border:1px solid #060606;background:#fafafa}
-  button{background:var(--accent);color:#fff;padding:10px 14px;border:none;border-radius:10px;cursor:pointer}
-  .muted{color:var(--muted);font-size:0.9rem}
-  footer{padding:30px 0;text-align:center;color:var(--muted);font-size:0.9rem}
-  .small{font-size:0.85rem;color:var(--muted)}
-  .export-btn{background:transparent;border:1px dashed var(--accent);color:var(--accent);padding:8px;border-radius:8px;cursor:pointer}
-  .map-wrap iframe{width:100%;height:300px;border:0;border-radius:10px}
-  .actions{display:flex;gap:8px;flex-wrap:wrap}
-</style> -->
+
 </head>
 <body>
 <header>
@@ -105,25 +69,6 @@
       <h2>RSVP — Confirma tu asistencia</h2>
       <p class="muted small">Rellena este formulario para que sepamos si vendrás y la comida.</p>
         <a class="form" href="https://forms.gle/BAdAUVzekQZNdoQt7">Confirmación asistencia</a>
-      <!-- <form id="rsvpForm" onsubmit="return false;">
-        <label>Nombre completo<input type="text" id="nombre" placeholder="Ej: Ana García" required></label>
-        <label>Email<input type="email" id="email" placeholder="ejemplo@correo.com"></label>
-        <label>Asistirás?
-          <select id="asistencia">
-            <option value="si">Sí — asistiré</option>
-            <option value="no">No — lo siento</option>
-            <option value="talvez">Tal vez</option>
-          </select>
-        </label>
-        <label>Plato / Preferencias (alergias, vegetarianos...)
-          <textarea id="menu" rows="2" placeholder="Ej: Vegetariano, sin gluten"></textarea>
-        </label>
-        <div class="actions" style="margin-top:6px">
-          <button id="guardar">Guardar RSVP</button>
-          <button id="export" type="button" class="export-btn">Exportar respuestas (CSV)</button>
-        </div>
-        <p id="rsvpMsg" class="small" style="margin-top:8px"></p>
-      </form> -->
 
       <details style="margin-top:12px">
         <summary class="small">Ver respuestas guardadas (solo en este navegador)</summary>
@@ -144,7 +89,10 @@
     </div>
     <div class="card center">
       <h3>Contacto</h3>
-      <p class="muted small">Para cualquier duda: <br><strong>email@dominio.com</strong><br>o +34 600 000 000</p>
+      <p class="muted small">Para cualquier duda: <br><strong>kioskogredos@gmail.com</strong><br>
+        <div class="muted small"><strong>Andrea</strong> +34 678 99 70 77</div>
+        <div class="muted small"><strong>Javier</strong> +34 645 54 40 54</div>
+      </p>
     </div>
   </section>
 
@@ -154,40 +102,6 @@
   <p class="small">Diseñado con ❤️ — Reemplaza el contenido por el tuyo. Puedes copiar/pegar este archivo como <code>index.html</code> y subirlo a GitHub Pages, Netlify o tu hosting.</p>
 </footer>
 
-<!-- <script>
-// Simple RSVP storage + export
-function loadResponses(){ try{ return JSON.parse(localStorage.getItem('rsvps')||'[]') }catch(e){return[]} }
-function saveResponse(r){ const arr=loadResponses(); arr.push(r); localStorage.setItem('rsvps',JSON.stringify(arr)); return arr }
-function renderStored(){ const el=document.getElementById('stored'); el.textContent = JSON.stringify(loadResponses(), null, 2) }
 
-document.getElementById('guardar').addEventListener('click', function(){
-  const nombre=document.getElementById('nombre').value.trim();
-  if(!nombre){ document.getElementById('rsvpMsg').textContent='Por favor indica tu nombre.'; return; }
-  const r={ nombre, email:document.getElementById('email').value.trim(), asistencia:document.getElementById('asistencia').value, menu:document.getElementById('menu').value.trim(), fecha: new Date().toISOString() }
-  const arr=saveResponse(r);
-  document.getElementById('rsvpMsg').textContent='¡Gracias! Tu respuesta ha sido guardada.';
-  document.getElementById('rsvpForm').reset();
-  renderStored();
-});
-
-document.getElementById('export').addEventListener('click', function(){
-  const arr=loadResponses();
-  if(!arr.length){ alert('No hay respuestas para exportar.'); return; }
-  const keys = ['nombre','email','asistencia','menu','fecha'];
-  const csv = [keys.join(',')].concat(arr.map(r => keys.map(k => '"' + ((r[k]||'').replace(/"/g,'""')) + '"').join(','))).join('\\n');
-  const blob = new Blob([csv], {type:'text/csv;charset=utf-8;'});
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement('a');
-  a.href = url;
-  a.download = 'rsvps.csv';
-  document.body.appendChild(a);
-  a.click();
-  a.remove();
-  URL.revokeObjectURL(url);
-});
-
-// Init
-renderStored();
-</script> -->
 </body>
 </html>
