@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Boda — Andrea & Javier</title>
+<meta name="description" content="Invitación y detalles de la boda de [Nombre1] & [Nombre2]" />
+<link rel="stylesheet" href="index.css">
+<!-- <style>
+  :root{
+    --bg:#fff;
+    --muted:#666;
+    --accent:#b76e79;
+    --accent-2:#f3d6da;
+    --card:#fff;
+    --glass: rgba(255,255,255,0.7);
+    --shadow: 0 8px 24px rgba(16,24,40,0.08);
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:linear-gradient(180deg,#fff 0%,#fff0 40%),#faf7f8;color:#222;line-height:1.5}
+  header{display:flex;align-items:center;justify-content:center;flex-direction:column;padding:56px 20px 24px;background:linear-gradient(120deg,var(--accent-2),#fff);text-align:center}
+  header h1{margin:0;font-size:clamp(28px,6vw,48px);letter-spacing:0.4px}
+  header p{margin:8px 0 0;color:var(--muted)}
+  .container{max-width:1000px;margin:28px auto;padding:0 20px}
+  .grid{display:grid;gap:18px;}
+  .two{grid-template-columns:repeat(2,1fr)}
+  .card{background:var(--card);border-radius:12px;padding:18px;box-shadow:var(--shadow);}
+  .lead{font-size:1.05rem;color:#333}
+  .center{text-align:center}
+  .date{font-weight:700;color:var(--accent);font-size:1.05rem}
+  .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+  .gallery img{width:100%;height:160px;object-fit:cover;border-radius:8px}
+  @media (max-width:720px){.gallery{grid-template-columns:repeat(2,1fr)}.two{grid-template-columns:1fr}}
+  .rsvp form{display:grid;gap:8px}
+  .rsvp label{font-size:0.9rem;color:var(--muted)}
+  input[type="text"], input[type="email"], select, textarea{padding:10px;border-radius:8px;border:1px solid #060606;background:#fafafa}
+  button{background:var(--accent);color:#fff;padding:10px 14px;border:none;border-radius:10px;cursor:pointer}
+  .muted{color:var(--muted);font-size:0.9rem}
+  footer{padding:30px 0;text-align:center;color:var(--muted);font-size:0.9rem}
+  .small{font-size:0.85rem;color:var(--muted)}
+  .export-btn{background:transparent;border:1px dashed var(--accent);color:var(--accent);padding:8px;border-radius:8px;cursor:pointer}
+  .map-wrap iframe{width:100%;height:300px;border:0;border-radius:10px}
+  .actions{display:flex;gap:8px;flex-wrap:wrap}
+</style> -->
+</head>
+<body>
+<header>
+  <h1>ANDREA <span style="font-weight:400">&amp;</span> JAVIER</h1>
+  <p class="muted">Nos casamos el <span class="date">16 de Mayo de 2026</span> <div class="muted">Barco de Ávila</div> </p>
+</header>
+
+<main class="container">
+  <section class="grid two" style="align-items:start">
+    <div class="card">
+      <h2>Invitación</h2>
+      <p class="lead">Nos encantaría celebrarlo contigo. Guarda la fecha y confirma tu asistencia vía el formulario de RSVP.</p>
+      <p class="small">Ceremonia: Iglesia / Lugar — Hora<br>Banquete: Restaurante / Salón — Hora</p>
+    </div>
+    <div class="card center">
+      <h3>Programa</h3>
+      <p class="muted small" style="margin:8px 0">Ejemplo de horario</p>
+      <ul style="text-align:left;margin:0;padding-left:18px">
+        <li>16:00 — Llegada de invitados</li>
+        <li>17:00 — Ceremonia</li>
+        <li>18:30 — Cóctel</li>
+        <li>20:00 — Cena y fiesta</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="grid" style="margin-top:18px">
+    <div class="card">
+      <h2>Nuestra historia</h2>
+      <p class="muted">Cómo nos conocimos: un pequeño texto romántico y divertido sobre vuestra historia. Reemplaza este párrafo con vuestro propio relato.</p>
+    </div>
+  </section>
+
+  <section class="grid two" style="margin-top:18px">
+    <div class="card">
+      <h2>Galería</h2>
+      <div class="gallery">
+        <img src="https://picsum.photos/seed/pic1/800/600" alt="foto 1">
+        <img src="https://picsum.photos/seed/pic2/800/600" alt="foto 2">
+        <img src="https://picsum.photos/seed/pic3/800/600" alt="foto 3">
+        <img src="https://picsum.photos/seed/pic4/800/600" alt="foto 4">
+        <img src="https://picsum.photos/seed/pic5/800/600" alt="foto 5">
+        <img src="https://picsum.photos/seed/pic6/800/600" alt="foto 6">
+      </div>
+      <p class="small" style="margin-top:8px">Sustituye las imágenes por tus propias fotos subiendo los archivos al servidor o cambiando los enlaces.</p>
+    </div>
+    <div class="card">
+      <h2>Ubicación</h2>
+      <p class="muted">Aquí irá el mapa con la ubicación de la ceremonia y del banquete.</p>
+      <div class="map-wrap" style="margin-top:8px">
+        <!-- Reemplaza el iframe con el embed de Google Maps del lugar exacto -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2436.0000000000005!2d-3.7037902!3d40.4167754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDAlMjAnMDAuMCJTIDMsNDAnMDAuMCJX!5e0!3m2!1ses!2ses!4v0000000000000" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <p class="small" style="margin-top:8px">Si quieres, puedo poner el embed real si me das el nombre exacto del lugar o la dirección.</p>
+    </div>
+  </section>
+
+  <section class="grid" style="margin-top:18px">
+    <div class="card rsvp">
+      <h2>RSVP — Confirma tu asistencia</h2>
+      <p class="muted small">Rellena este formulario para que sepamos si vendrás y la comida.</p>
+        <a class="form" href="https://forms.gle/BAdAUVzekQZNdoQt7">Confirmación asistencia</a>
+      <!-- <form id="rsvpForm" onsubmit="return false;">
+        <label>Nombre completo<input type="text" id="nombre" placeholder="Ej: Ana García" required></label>
+        <label>Email<input type="email" id="email" placeholder="ejemplo@correo.com"></label>
+        <label>Asistirás?
+          <select id="asistencia">
+            <option value="si">Sí — asistiré</option>
+            <option value="no">No — lo siento</option>
+            <option value="talvez">Tal vez</option>
+          </select>
+        </label>
+        <label>Plato / Preferencias (alergias, vegetarianos...)
+          <textarea id="menu" rows="2" placeholder="Ej: Vegetariano, sin gluten"></textarea>
+        </label>
+        <div class="actions" style="margin-top:6px">
+          <button id="guardar">Guardar RSVP</button>
+          <button id="export" type="button" class="export-btn">Exportar respuestas (CSV)</button>
+        </div>
+        <p id="rsvpMsg" class="small" style="margin-top:8px"></p>
+      </form> -->
+
+      <details style="margin-top:12px">
+        <summary class="small">Ver respuestas guardadas (solo en este navegador)</summary>
+        <pre id="stored" style="white-space:pre-wrap;word-break:break-word;background:#f9f9f9;padding:8px;border-radius:8px;margin-top:8px"></pre>
+      </details>
+    </div>
+  </section>
+
+  <section class="grid two" style="margin-top:18px">
+    <div class="card">
+      <h2>Alojamientos recomendados</h2>
+      <ul style="margin:0;padding-left:18px">
+        <li>Hotel A — a 5 min</li>
+        <li>Hotel B — a 10 min</li>
+        <li>Apartamentos recomendados</li>
+      </ul>
+      <p class="small">Incluye links, precios o códigos si tienes convenios.</p>
+    </div>
+    <div class="card center">
+      <h3>Contacto</h3>
+      <p class="muted small">Para cualquier duda: <br><strong>email@dominio.com</strong><br>o +34 600 000 000</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p class="small">Diseñado con ❤️ — Reemplaza el contenido por el tuyo. Puedes copiar/pegar este archivo como <code>index.html</code> y subirlo a GitHub Pages, Netlify o tu hosting.</p>
+</footer>
+
+<!-- <script>
+// Simple RSVP storage + export
+function loadResponses(){ try{ return JSON.parse(localStorage.getItem('rsvps')||'[]') }catch(e){return[]} }
+function saveResponse(r){ const arr=loadResponses(); arr.push(r); localStorage.setItem('rsvps',JSON.stringify(arr)); return arr }
+function renderStored(){ const el=document.getElementById('stored'); el.textContent = JSON.stringify(loadResponses(), null, 2) }
+
+document.getElementById('guardar').addEventListener('click', function(){
+  const nombre=document.getElementById('nombre').value.trim();
+  if(!nombre){ document.getElementById('rsvpMsg').textContent='Por favor indica tu nombre.'; return; }
+  const r={ nombre, email:document.getElementById('email').value.trim(), asistencia:document.getElementById('asistencia').value, menu:document.getElementById('menu').value.trim(), fecha: new Date().toISOString() }
+  const arr=saveResponse(r);
+  document.getElementById('rsvpMsg').textContent='¡Gracias! Tu respuesta ha sido guardada.';
+  document.getElementById('rsvpForm').reset();
+  renderStored();
+});
+
+document.getElementById('export').addEventListener('click', function(){
+  const arr=loadResponses();
+  if(!arr.length){ alert('No hay respuestas para exportar.'); return; }
+  const keys = ['nombre','email','asistencia','menu','fecha'];
+  const csv = [keys.join(',')].concat(arr.map(r => keys.map(k => '"' + ((r[k]||'').replace(/"/g,'""')) + '"').join(','))).join('\\n');
+  const blob = new Blob([csv], {type:'text/csv;charset=utf-8;'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'rsvps.csv';
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  URL.revokeObjectURL(url);
+});
+
+// Init
+renderStored();
+</script> -->
+</body>
+</html>
